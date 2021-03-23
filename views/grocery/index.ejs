@@ -2,11 +2,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Easy Grocery List</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
   </head>
   <body>
   
@@ -16,16 +18,27 @@
 <table id="list">
   <thead>
     <tr>
+
+      <header  class="head">
+        <div style = "position:relative; top:20px;">
       <h1>Welcome to Easy Grocery List</h1>
+    </header>
       
-
+    <article class="subHead">
+      <div style = "position:relative; top:60px;">
       <h2>Easy way to Keep track of your Groceries</h2>
+    </article>
       
-          <input type="submit" value="Create List">
+    <article class="photo">
+      <div style = "position:relative; top:100px;">
+    <img src="/stylesheets/grocery.png"/>
+  
+
+      <article class="addButton">
+        <div style = "position:relative; top:100px;">
+          <h4><a href="/new">Add Groceries</a></h4>
+        </article>
      
-
-
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -36,6 +49,8 @@
         <td><a href="/groceryList/<%= m._id %>">DETAILS</a></td>
       </tr>
       <% }); %>
+
+      
     </tbody>
   </table>
   

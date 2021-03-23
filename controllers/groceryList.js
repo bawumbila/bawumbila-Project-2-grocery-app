@@ -16,6 +16,17 @@ function newGroceryList(req, res) {
   res.render('grocery/new');
 };
 
+
+function create(req, res) {
+  Grocery.create(req.body, function(err, grocery) {
+        console.log(req.body); 
+        res.redirect('/groceryList'); 
+    })
+}
+
+
+
+
 function create(req, res) {
   // remove empty/blank inputs from req.body
   for (let key in req.body) {

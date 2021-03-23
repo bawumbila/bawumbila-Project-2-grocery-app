@@ -1,0 +1,51 @@
+
+
+
+
+a {
+    background-color: rgb(175, 56, 56);
+    color: white;
+    /* padding: 1em 1.5em; */
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+  
+  a:hover {
+    background-color: #555;
+  }
+  
+  a:active {
+    background-color: black;
+  }
+  
+  /* a:visited {
+    background-color: #ccc;
+  } */
+
+
+  body {
+    background-image: url("/stylesheets/background 1.jpeg");
+    /* background: rgba(76, 175, 80, 0.3); */
+      /* background-color: darkgray; */
+  }
+
+  img {
+    border: 1px solid rgb(10, 1, 1);
+    border-radius: 4px;
+    padding: 5px;
+    width: 500px;
+  }
+
+  .head {
+    text-align:center
+  }
+
+  .subHead {
+    text-align:center
+  }
+
+  .addButton {
+      
+    text-align:center
+  }
