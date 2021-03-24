@@ -1,4 +1,8 @@
-
+* {
+    width: 0 auto; 
+    margin: 0 auto;
+    
+}
 
 
 
@@ -25,27 +29,52 @@ a {
 
 
   body {
-    background-image: url("/stylesheets/background 1.jpeg");
+    /* background-image: url("/stylesheets/background 1.jpeg"); */
+    
     /* background: rgba(76, 175, 80, 0.3); */
-      /* background-color: darkgray; */
+      background-color: rgb(169, 211, 240);
   }
 
   img {
+      
     border: 1px solid rgb(10, 1, 1);
     border-radius: 4px;
     padding: 5px;
     width: 500px;
+    
   }
 
+  /* .photo {
+    position: relative;
+      left: 500px;
+  } */
+
+ 
+
   .head {
-    text-align:center
+    justify-content: space-around;
+    text-align:center;
+    font-family: Alegreya Sans SC;
+    font-size: larger;
+    color: rgb(39, 106, 173);
+    background-color: grey;
+    border-radius: 10px;
+    
   }
 
   .subHead {
-    text-align:center
+    text-align:center;
+    font-family: Delius;
+  }
+
+  .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-around; */
   }
 
   .addButton {
       
-    text-align:center
+    text-align:center;
   }

@@ -11,10 +11,11 @@
 </head>
 
 <body>
-  <h1>Add groceries</h1>
+  <%- include('../partials/header') %>
+  <h1>Add groceries List</h1>
   <form action="/" method="POST">
-    Name: <input type="text" name="name" /><br />
-    price: <input type="text" name="totalPrice" /><br />
+    List Name: <input type="text" name="name" /><br />
+    <!-- price: <input type="text" name="totalPrice" /><br /> -->
     done: <input type="checkbox" name="done" /><br />
     <input type="submit" name="" value="Create Grocery List" />
   </form>

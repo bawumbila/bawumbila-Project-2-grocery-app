@@ -5,12 +5,20 @@
 
     <title>Easy Grocery List</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&family=Delius&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Chelsea+Market&display=swap" rel="stylesheet">
 
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
   </head>
   <body>
+    <%- include('../partials/header') %>
   
 
 
@@ -21,22 +29,24 @@
 
       <header  class="head">
         <div style = "position:relative; top:20px;">
-      <h1>Welcome to Easy Grocery List</h1>
+      <h1>Welcome to Easy Grocery App!</h1>
     </header>
       
     <article class="subHead">
       <div style = "position:relative; top:60px;">
-      <h2>Easy way to Keep track of your Groceries</h2>
+      <h2>Easy way to Keep track of your Groceries.</h2>
     </article>
       
-    <article class="photo">
+    <div class="photo">
       <div style = "position:relative; top:100px;">
-    <img src="/stylesheets/grocery.png"/>
+    <img src="/stylesheets/grocery.png">
+    </div>
   
 
       <article class="addButton">
-        <div style = "position:relative; top:100px;">
-          <h4><a href="/new">Add Groceries</a></h4>
+        <div style = "position:relative; top:200px;">
+          <!-- <div style = "position:relative; right:500px;"> -->
+          <h4><a href="/show">Show Groceries List</a></h4>
         </article>
      
     </tr>

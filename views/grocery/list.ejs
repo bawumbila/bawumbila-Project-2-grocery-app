@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+ 
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <%- include('../partials/header') %>
+  <h1>Grocery List show page</h1>
+
+  <tbody>
+    
+      <tr>
+       
+        <td><a href="/:<%= groceryList._id %>"><%= groceryList.name %></a></td>
+      </tr>
+      <br>
+      
+
+      <form action="<%= groceryList._id %>/grocery" method="post" id="add-grocery-to-list">
+
+        <select name="groceryId">
+          <% groceries.forEach(function(p) { %>
+            <option value="<%= p._id %>"><%= p.name %></option>
+          <% }) %>
+        </select>
+        <button type="submit">Add to List</button>
+     </form>
+      
+     <div>Groceries in This List:</div>
+     <ul>
+       <% records.forEach(function(p) { %>
+         <li><%= p.name %> </li>
+       <% }); %>
+     </ul>
+    </tbody>
+  
+</body>
+
+</html>

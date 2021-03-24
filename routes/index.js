@@ -18,8 +18,14 @@
   
   router.get('/', groceryListCtrl.index);
   router.get('/new', groceryListCtrl.new);
-//   router.get('/:id', moviesCtrl.show);
   router.post('/', groceryListCtrl.create);
+  router.get('/show', groceryListCtrl.show);
+  router.post('/addgrocery', groceryListCtrl.addGrocery);
+  
+  router.get('/creategrocery', groceryListCtrl.createGrocery);
+
+  router.post('/:id/grocery', groceryListCtrl.grocery);
+  router.get('/:id', groceryListCtrl.groceryList);
   
   
   module.exports = router;

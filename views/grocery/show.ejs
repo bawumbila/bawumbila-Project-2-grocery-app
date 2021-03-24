@@ -10,16 +10,32 @@
 </head>
 
 <body>
-  <h1>Fruits show page</h1>
-  The <%=fruit.name; %> is <%=fruit.color; %>.
-  <% if(fruit.readyToEat === true){ %>
-  It is ready to eat
-  <% } else { %>
-  It is not ready to eat
-  <% } %>
-  <nav>
-    <a href="/groceryList">Back to Groceries</a>
-  </nav>
+  <%- include('../partials/header') %>
+  <h1>Grocery List show page</h1>
+
+  <tbody>
+    <% groceryList.forEach(function(m) { %>
+      <tr>
+       
+        <td><a href="/<%= m._id %>"><%= m.name %></a></td>
+      </tr>
+      <br>
+      <% }); %>
+
+      
+    </tbody>
+  
+    <article class="addButton">
+      <div style = "position:relative; top:200px;">
+        <!-- <div style = "position:relative; right:500px;"> -->
+        <h4><a href="/new">Add New Grocery List</a></h4>
+      </article>
+
+      <article class="addButton">
+        <div style = "position:relative; top:200px;">
+          <!-- <div style = "position:relative; right:500px;"> -->
+          <h4><a href="/creategrocery">Add New Grocery</a></h4>
+        </article>
 </body>
 
 </html>
