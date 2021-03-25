@@ -14,7 +14,7 @@
   const router = express.Router();
   const groceryListCtrl = require('../controllers/groceryList');
 
-  router.get('/show/:id/edit', groceryListCtrl.edit);
+  router.get('/:id/edit', groceryListCtrl.edit);
   
   router.get('/', groceryListCtrl.index);
   router.get('/new', groceryListCtrl.new);

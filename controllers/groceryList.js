@@ -28,8 +28,9 @@ function newGroceryList(req, res) {
 
 
 function edit(req, res) {
-  GroceryList.findById(req.params.id, function(err, groceryList) {
-    res.render('grocery/edit', {groceryList});
+  GroceryItem.findById(req.params.id, function(err, groceryItem) {
+    console.log(groceryItem);
+    res.render('grocery/edit', {groceryItem});
   });
 }
 
