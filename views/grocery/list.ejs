@@ -12,13 +12,13 @@
   <%- include('../partials/header') %>
   <h1>Grocery List show page</h1>
 
-  <tbody>
+  <div>
     <div class="showbodylist">
-      <tr>
+      <div>
        
-        <td><a href="/:<%= groceryList._id %>"></a><%= groceryList.name %></a></td>
+        <div><a href="/:<%= groceryList._id %>"></a><%= groceryList.name %></a></div>
         Total Price: <%= groceryList.totalPrice %>
-      </tr>
+      </div>
       <br>
       
 
@@ -37,21 +37,21 @@
      <div class="listbkgrnd">
      <ul>
        <% records.forEach(function(p) { %>
-        <tr>
+        <div class="listelement">
           
-          <td>
+          <div>
           <form action="/removegrocery/<%= groceryList._id %>/<%= p._id %>?_method=DELETE"
           class="delete-form" method="POST">
-          <li><%= p.name %>: $<%= p.price %></li>
+          <li class="list"><%= p.name %>: $<%= p.price %></li>
           <button type="submit">X</button>
         </form>
-        </td>
-        <td><a href="/<%= p._id %>/edit">Edit</a></td>
-      </tr>
+      </div>
+        <div><a href="/<%= p._id %>/edit">Edit</a></div>
+    </div>
        <% }); %>
      </ul>
      </div>
-    </tbody>
+    </div>
   
 </body>
 

@@ -16,30 +16,35 @@
   
   <h1>Grocery List show page</h1>
 
-  <tbody>
+  <div class="listbody">
     <% groceryList.forEach(function(m, idx) { %>
-      <tr>
+      <div>
        
-        <td><a href="/<%= m._id %>"><%= m.name %></a></td>
+        <div><a href="/<%= m._id %>"><%= m.name %></a></div>
 
-        <td>
+        <div>
           <a href="/<%= m._id %>/edit">Edit</a>
-        </td>
-        <td>
+        </div>
+        <div>
           <form action="/groceries/<%= m._id %>?_method=DELETE"
             class="delete-form" method="POST">
             <button type="submit">Delete</button>
           </form>
 
-        </td>
+        </div>
+        
+        
 
 
-      </tr>
-      <br>
+      </div>
+    
+
+      
+    <br>
       <% }); %>
 
       
-    </tbody>
+    </div>
   
     <article class="showButton">
       

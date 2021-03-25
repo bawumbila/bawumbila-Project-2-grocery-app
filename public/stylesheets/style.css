@@ -7,7 +7,7 @@
 
 
 a {
-    background-color: rgb(235, 53, 8);
+    background-color: tomato;
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -49,6 +49,7 @@ a {
     
   }
 
+
   .showbodylist {
     text-align: center;
     list-style-position: inside;
@@ -67,16 +68,36 @@ a {
     font-size: larger;
     color: rgb(194, 32, 32);
     background-color: grey;
-    border-radius: 10px;
+    border-radius: 15px;
     
   }
+
+ 
 
   .subHead, .additems {
     text-align:center;
     background-color: white;
     border-radius: 4px;
-    padding: 20px;
+    padding: 10px;
   }
+  .list {
+      display: inline;
+  }
+
+  .listelement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center !important;
+    width: 200px;
+  }
+
+  /* .listbody {
+    display: flex;
+    flex-direction: row;
+    
+    
+  } */
 
   .additems {
       margin-top: 300px;
@@ -90,7 +111,7 @@ a {
 
   .addButton h4 a {
       color: rgb(8, 8, 8);
-      background-color: rgb(228, 23, 23);
+      background-color:tomato;
     padding: 20px;
     font-family:  Helvetica;
       margin-bottom: 8px;
