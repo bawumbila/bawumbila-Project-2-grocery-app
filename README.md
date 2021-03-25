@@ -18,13 +18,13 @@
 - Github
 - Heroku for deployment.
 
-##  Screenshots amd Wireframes. 📸
+##  Screenshots and Wireframes. 📸
 
 ![Wireframe 1](./public/stylesheets/wireframe1.png)
 
 ![Wireframe Mobile](./public/stylesheets/wireframe2.png)
 
-![App Screenshot](./public/stylesheets/imgs/png)
+![App Screenshot](./public/stylesheets/imgs.png)
 
 ##  Future Enhancements. 🛠
 
