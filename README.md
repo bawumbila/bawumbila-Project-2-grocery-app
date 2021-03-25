@@ -20,11 +20,11 @@
 
 ##  Screenshots amd Wireframes. 📸
 
-![Wireframe 1](./stylesheets/wireframe1.png)
+![Wireframe 1](./public/stylesheets/wireframe1.png)
 
-![Wireframe Mobile](./stylesheets/wireframe2.png)
+![Wireframe Mobile](./public/stylesheets/wireframe2.png)
 
-![App Screenshot](./stylesheets/imgs/png)
+![App Screenshot](./public/stylesheets/imgs/png)
 
 ##  Future Enhancements. 🛠
 
