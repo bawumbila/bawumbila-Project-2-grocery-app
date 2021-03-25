@@ -18,13 +18,13 @@
 
   <tbody>
       
-      <form id="add-grocery-form" action="/:id?_method=PUT" method="POST">
+      <form id="add-grocery-form" action="/<%=groceryItem._id %>?_method=PUT" method="POST">
         <label>Name:</label>
 
-        <input type="text" name="name" value="<%= groceryItem.name %> <%= price %>">
+        <input type="text" name="name" value="<%= groceryItem.name %>">
         <label>Price:</label>
         
-        <input type="text" name="price">
+        <input type="text" name="price" value="<%= groceryItem.price %>">
         
        
         <input type="submit" name="" value="Update Grocery Item" />

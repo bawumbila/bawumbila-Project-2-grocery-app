@@ -13,7 +13,7 @@ module.exports = {
   delete: deleteGroceryItem,
   removegrocery,
   edit,
-  // update
+  update
 
 };
 function index(req, res) {
@@ -34,6 +34,11 @@ function edit(req, res) {
   });
 }
 
+function update(req, res) {
+  GroceryItem.findByIdAndUpdate(req.params.id, req.body, function(err, grocery){
+    res.redirect("/show");
+});
+}
 
 
 
