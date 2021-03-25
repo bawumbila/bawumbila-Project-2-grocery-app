@@ -11,7 +11,9 @@ module.exports = {
   createGrocery,
   grocery,
   delete: deleteGroceryItem,
-  removegrocery
+  removegrocery,
+  edit,
+  // update
 
 };
 function index(req, res) {
@@ -23,6 +25,15 @@ function index(req, res) {
 function newGroceryList(req, res) {
   res.render('grocery/new', { title: "New Grocery List" });
 };
+
+
+function edit(req, res) {
+  GroceryList.findById(req.params.id, function(err, groceryList) {
+    res.render('grocery/edit', {groceryList});
+  });
+}
+
+
 
 
 function removegrocery(req, res) {

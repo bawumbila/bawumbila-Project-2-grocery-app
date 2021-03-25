@@ -37,12 +37,17 @@
      <div class="listbkgrnd">
      <ul>
        <% records.forEach(function(p) { %>
+        <tr>
+          
+          <td>
           <form action="/removegrocery/<%= groceryList._id %>/<%= p._id %>?_method=DELETE"
           class="delete-form" method="POST">
           <li><%= p.name %>: $<%= p.price %></li>
           <button type="submit">X</button>
         </form>
-      
+        </td>
+        <td><a href="/show/<%= groceryList._id %>/edit">Edit</a></td>
+      </tr>
        <% }); %>
      </ul>
      </div>
