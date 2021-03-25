@@ -12,27 +12,23 @@
 [click here](https://bawumbila.github.io/Rick-and-Morty/) to get started. 
 
 ##  Technologies Used. ⚙️
-- HTML5
-- CSS3
-- JS
-- jQuery
-- [Rick and Morty API](https://rickandmortyapi.com/)
-- Github pages for deployment.
+- Express
+- MongoDB
+- Mongoose
+- Github
+- Heroku for deployment.
 
 ##  Screenshots amd Wireframes. 📸
 
-![Wireframe 1](./imgs/wireframe1.png)
+![Wireframe 1](./stylesheets/wireframe1.png)
 
-![Wireframe Mobile](./imgs/wireframemobile.png)
+![Wireframe Mobile](./stylesheets/wireframe2.png)
 
-![App Screenshot](./imgs/AppOne.png)
-
-![Mobile Screenshot](./imgs/AppMobile.png)
-
+![App Screenshot](./stylesheets/imgs/png)
 
 ##  Future Enhancements. 🛠
 
-- Further Optimization to run more efficiently.
+- Fix price total when you add items to list.
 - Minor UI tweeks.
 - Possible Animations.
 
