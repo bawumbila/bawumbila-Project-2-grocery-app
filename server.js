@@ -3,7 +3,7 @@ const morgan = require("morgan");
 
 require("./config/database");
 const methodOverride = require("method-override");
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const indexRouter = require("./routes/index");
 // const showRouter = require("./routes/show");
