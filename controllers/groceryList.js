@@ -9,7 +9,9 @@ module.exports = {
   groceryList,
   addGrocery,
   createGrocery,
-  grocery
+  grocery,
+  delete: deleteGroceryItem,
+  removegrocery
 
 };
 function index(req, res) {
@@ -23,14 +25,36 @@ function newGroceryList(req, res) {
 };
 
 
+function removegrocery(req, res) {
+  GroceryList.findById(req.params.id, function(err, groceryList) { 
+    
+    var index = groceryList.items.indexOf(req.params.idx);
+    if (index >= 0) {
+      groceryList.items.splice( index, 1 );
+    }
+  
+    groceryList.totalPrice= calcTotalPrice(groceryList.items)
+    console.log('totalprice'+groceryList.totalPrice)
+    groceryList.save(function(err) {
+        res.redirect(`/${groceryList._id}`);
+    });
+  });
+}
+
+
+function deleteGroceryItem(req, res) {
+  GroceryList.findByIdAndDelete(req.params.id).exec(function(err, grocery) {
+    console.log(err, grocery)
+    res.redirect('/show');
+});
+}
+
 function create(req, res) {
   Grocery.create(req.body, function(err, grocery) {
         console.log(req.body); 
         res.redirect('/groceryList'); 
     })
 }
-
-
 
 
 function create(req, res) {
@@ -64,7 +88,7 @@ function show(req, res) {
       GroceryItem.find({}, function(err, groceries) {
         GroceryItem.find().where('_id').in(groceryList.items).exec((err, records) => {
           console.log(groceryList)
-          res.render("grocery/list", {groceryList, groceries, records});
+          res.render("grocery/list", {groceryList, groceries, records, title: 'list'});
         });
     
       
@@ -91,15 +115,30 @@ function show(req, res) {
 
       function grocery(req, res) {
         GroceryList.findById(req.params.id, function(err, groceryList) {
-          // push the performerId from req.body into the cast array of the found movie
+          
           groceryList.items.push(req.body.groceryId);
-          // save the movie document
+          
           groceryList.save(function(err) {
-              // res.redirect to the movie show page
+              
+            
               res.redirect(`/${groceryList._id}`);
           });
       });
               
+      }
+
+      function calcTotalPrice(items) {
+        price= 0.0;
+        for (item in items) {
+          console.log(items[item])
+          GroceryItem.findById(items[item], function(err, groceryItem) {
+            console.log(groceryItem.price)
+          price= price+Number(groceryItem.price);
+            
+        });
+        }
+        console.log(price)
+       return price;       
       }
 
 

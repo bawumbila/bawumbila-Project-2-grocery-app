@@ -3,21 +3,37 @@
 
 <head>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&family=Delius&display=swap" rel="stylesheet">
 
   <meta charset="utf-8">
   <title></title>
 </head>
 
 <body>
+  <div class="showbody">
   <%- include('../partials/header') %>
+  
   <h1>Grocery List show page</h1>
 
   <tbody>
-    <% groceryList.forEach(function(m) { %>
+    <% groceryList.forEach(function(m, idx) { %>
       <tr>
        
         <td><a href="/<%= m._id %>"><%= m.name %></a></td>
+
+        <td>
+          <a href="/<%= m._id %>">Edit</a>
+        </td>
+        <td>
+          <form action="/groceries/<%= m._id %>?_method=DELETE"
+            class="delete-form" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+
+        </td>
+
+
       </tr>
       <br>
       <% }); %>
@@ -25,16 +41,17 @@
       
     </tbody>
   
-    <article class="addButton">
-      <div style = "position:relative; top:200px;">
-        <!-- <div style = "position:relative; right:500px;"> -->
-        <h4><a href="/new">Add New Grocery List</a></h4>
+    <article class="showButton">
+      
+       
+        <h4><a href="/new">New Grocery List Title</a></h4>
+        
       </article>
 
-      <article class="addButton">
-        <div style = "position:relative; top:200px;">
-          <!-- <div style = "position:relative; right:500px;"> -->
-          <h4><a href="/creategrocery">Add New Grocery</a></h4>
+      <article class="showButton">
+        
+          
+          <h4><a href="/creategrocery">Add New Grocery Item</a></h4>
         </article>
 </body>
 

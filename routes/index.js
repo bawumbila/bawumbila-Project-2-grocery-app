@@ -20,6 +20,10 @@
   router.get('/new', groceryListCtrl.new);
   router.post('/', groceryListCtrl.create);
   router.get('/show', groceryListCtrl.show);
+  router.delete('/removegrocery/:id/:idx', groceryListCtrl.removegrocery);
+  
+  router.delete('/groceries/:id', groceryListCtrl.delete);
+  
   router.post('/addgrocery', groceryListCtrl.addGrocery);
   
   router.get('/creategrocery', groceryListCtrl.createGrocery);

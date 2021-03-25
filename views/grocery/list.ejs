@@ -13,10 +13,11 @@
   <h1>Grocery List show page</h1>
 
   <tbody>
-    
+    <div class="showbodylist">
       <tr>
        
-        <td><a href="/:<%= groceryList._id %>"><%= groceryList.name %></a></td>
+        <td><a href="/:<%= groceryList._id %>"></a><%= groceryList.name %></a></td>
+        Total Price: <%= groceryList.totalPrice %>
       </tr>
       <br>
       
@@ -31,12 +32,20 @@
         <button type="submit">Add to List</button>
      </form>
       
-     <div>Groceries in This List:</div>
+     <div class="listbkgrnd">  Groceries in This List:</div>
+
+     <div class="listbkgrnd">
      <ul>
        <% records.forEach(function(p) { %>
-         <li><%= p.name %> </li>
+          <form action="/removegrocery/<%= groceryList._id %>/<%= p._id %>?_method=DELETE"
+          class="delete-form" method="POST">
+          <li><%= p.name %>: $<%= p.price %></li>
+          <button type="submit">X</button>
+        </form>
+      
        <% }); %>
      </ul>
+     </div>
     </tbody>
   
 </body>

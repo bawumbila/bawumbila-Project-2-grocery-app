@@ -7,12 +7,14 @@
 
 
 a {
-    background-color: rgb(175, 56, 56);
+    background-color: rgb(235, 53, 8);
     color: white;
     /* padding: 1em 1.5em; */
     text-decoration: none;
+    font-size: 20px;
+    border: 5px;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 3px;
   }
   
   a:hover {
@@ -22,18 +24,17 @@ a {
   a:active {
     background-color: black;
   }
-  
-  /* a:visited {
-    background-color: #ccc;
-  } */
 
 
   body {
-    /* background-image: url("/stylesheets/background 1.jpeg"); */
-    
-    /* background: rgba(76, 175, 80, 0.3); */
-      background-color: rgb(169, 211, 240);
+      
+    background-image: url("./background.jpeg");
+    background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
   }
+
+
 
   img {
       
@@ -41,40 +42,82 @@ a {
     border-radius: 4px;
     padding: 5px;
     width: 500px;
+  }
+
+
+  .showbody {
+    text-align: center;
     
   }
 
-  /* .photo {
-    position: relative;
-      left: 500px;
-  } */
+  .showbodylist {
+    text-align: center;
+    list-style-position: inside;
+  }
 
- 
+  .maincontent {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      min-height: 100vh;
+  }
 
   .head {
     justify-content: space-around;
     text-align:center;
-    font-family: Alegreya Sans SC;
     font-size: larger;
-    color: rgb(39, 106, 173);
+    color: rgb(194, 32, 32);
     background-color: grey;
     border-radius: 10px;
     
   }
 
-  .subHead {
+  .subHead, .additems {
     text-align:center;
-    font-family: Delius;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
   }
 
+  .additems {
+      margin-top: 300px;
+      width: 600px;
+  }
   .photo {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* justify-content: space-around; */
   }
 
-  .addButton {
-      
-    text-align:center;
+  .addButton h4 a {
+      color: rgb(8, 8, 8);
+      background-color: rgb(228, 23, 23);
+    padding: 20px;
+    font-family:  Helvetica;
+      margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .showButton {
+      padding: 20px;
+  }
+  .addlist {
+    text-align: center;
+  }
+
+  .listbkgrnd {
+      background-color: white;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: Helvetica;
+    color: rgb(7, 4, 172);
+    padding: 5px;
+    border-radius: 4px;
+    background-color: rgb(202, 202, 202);
+  }
+
+  tbody {
+    text-align: center;
   }

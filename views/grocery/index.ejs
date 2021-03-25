@@ -5,8 +5,6 @@
 
     <title>Easy Grocery List</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&family=Delius&display=swap" rel="stylesheet">
@@ -15,52 +13,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Chelsea+Market&display=swap" rel="stylesheet">
 
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style></style>
 
   </head>
   <body>
     <%- include('../partials/header') %>
-  
 
+    <div class="bkgrndphoto"
+    <!-- style="background-image: url('https://png.pngtree.com/png-vector/20191225/ourmid/pngtree-fast-food-icons-set-black-and-white-style-of-fast-food-png-image_2094521.jpg');" -->
+    ></div>
+      
 
-
-<table id="list">
-  <thead>
-    <tr>
+    <main class="maincontent">
 
       <header  class="head">
-        <div style = "position:relative; top:20px;">
       <h1>Welcome to Easy Grocery App!</h1>
     </header>
       
     <article class="subHead">
-      <div style = "position:relative; top:60px;">
       <h2>Easy way to Keep track of your Groceries.</h2>
     </article>
       
     <div class="photo">
-      <div style = "position:relative; top:100px;">
     <img src="/stylesheets/grocery.png">
     </div>
   
 
       <article class="addButton">
-        <div style = "position:relative; top:200px;">
-          <!-- <div style = "position:relative; right:500px;"> -->
           <h4><a href="/show">Show Groceries List</a></h4>
         </article>
      
-    </tr>
-  </thead>
-  <tbody>
-    <% groceryList.forEach(function(m) { %>
-      <tr>
-        <td><%= m.title %></td>
-        <td><%= m.releaseYear %></td>
-        <td><a href="/groceryList/<%= m._id %>">DETAILS</a></td>
-      </tr>
-      <% }); %>
-
-      
-    </tbody>
-  </table>
+    </main>
+  
+  
+</body>
   
