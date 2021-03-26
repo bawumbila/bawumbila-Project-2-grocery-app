@@ -12,6 +12,9 @@
 [click here](https://groceries-app-bawa.herokuapp.com/) to get started. 
 
 ##  Technologies Used. ⚙️
+- CSS
+- HTML
+- JavaScript
 - Express
 - MongoDB
 - Mongoose
