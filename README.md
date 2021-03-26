@@ -31,3 +31,4 @@
 - Fix price total when you add items to list.
 - Minor UI tweeks.
 - Possible Animations.
+- Add ability to log in.
