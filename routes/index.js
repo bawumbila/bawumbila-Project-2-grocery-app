@@ -37,7 +37,7 @@
   
 
   router.post('/:id/grocery', groceryListCtrl.grocery);
-  router.get('/:id', groceryListCtrl.groceryList);
+  router.get('/lists/:id', groceryListCtrl.groceryList);
   
   
   module.exports = router;
