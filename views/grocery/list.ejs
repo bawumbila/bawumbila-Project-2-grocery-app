@@ -16,8 +16,8 @@
     <div class="showbodylist">
       <div>
        
-        <div><a href="/:<%= groceryList._id %>"></a><%= groceryList.name %></a></div>
-        Total Price: <%= groceryList.totalPrice %>
+        <div class="showname"><a href="/:<%= groceryList._id %>"></a><%= groceryList.name %></a></div>
+        <!-- Total Price: <%= groceryList.totalPrice %> -->
       </div>
       <br>
       
@@ -32,8 +32,8 @@
         <button type="submit">Add to List</button>
      </form>
       
-     <div class="listbkgrnd">  Groceries in This List:</div>
-
+     <div class="backgroundcolor">  Groceries in This List:</div>
+     
      <div class="listbkgrnd">
      <ul>
        <% records.forEach(function(p) { %>

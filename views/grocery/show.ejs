@@ -11,7 +11,6 @@
 </head>
 
 <body>
-  <div class="showbody">
   <%- include('../partials/header') %>
   
   <h1>Grocery List show page</h1>
@@ -20,44 +19,37 @@
     <% groceryList.forEach(function(m, idx) { %>
       <div>
        
-        <div><a href="/<%= m._id %>"><%= m.name %></a></div>
+        <div class="listwhole">
+        <div class="listname"><a href="/<%= m._id %>"><%= m.name %></a></div>
 
-        <div>
-          <a href="/<%= m._id %>/edit">Edit</a>
+        <div class="listedit">
+          <a href="/<%= m._id %>/grocerylistedit">Edit</a>
         </div>
-        <div>
+        <div class="listdelete">
           <form action="/groceries/<%= m._id %>?_method=DELETE"
             class="delete-form" method="POST">
             <button type="submit">Delete</button>
           </form>
 
         </div>
-        
-        
-
-
-      </div>
-    
-
-      
+        </div>
+      </div> 
     <br>
-      <% }); %>
-
-      
+      <% }); %> 
     </div>
   
-    <article class="showButton">
+    <div class="showButton">
       
        
         <h4><a href="/new">New Grocery List Title</a></h4>
         
-      </article>
+    </div>
 
-      <article class="showButton">
+      <div class="showButton">
         
           
           <h4><a href="/creategrocery">Add New Grocery Item</a></h4>
-        </article>
+      </div>
 </body>
 
 </html>

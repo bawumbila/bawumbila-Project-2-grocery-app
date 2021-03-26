@@ -13,7 +13,9 @@ module.exports = {
   delete: deleteGroceryItem,
   removegrocery,
   edit,
-  update
+  update,
+  editgrocerylist,
+  updateGroceryList
 
 };
 function index(req, res) {
@@ -30,8 +32,24 @@ function newGroceryList(req, res) {
 function edit(req, res) {
   GroceryItem.findById(req.params.id, function(err, groceryItem) {
     console.log(groceryItem);
-    res.render('grocery/edit', {groceryItem});
+    res.render('grocery/edit', {title: "Edit",groceryItem});
   });
+}
+
+function editgrocerylist(req, res) {
+  GroceryList.findById(req.params.id, function(err, groceryList) {
+    console.log(groceryList);
+    res.render('grocery/grocerylistedit', {title: "List Edit",groceryList});
+  });
+}
+
+
+function updateGroceryList(req, res) {
+  console.log(req.params.id)
+  console.log(req.body)
+  GroceryList.findByIdAndUpdate(req.params.id, req.body, function(err, grocery){
+    res.redirect("/show");
+});
 }
 
 function update(req, res) {
@@ -39,7 +57,6 @@ function update(req, res) {
     res.redirect("/show");
 });
 }
-
 
 
 function removegrocery(req, res) {

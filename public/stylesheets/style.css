@@ -44,11 +44,6 @@ a {
   }
 
 
-  .showbody {
-    text-align: center;
-    
-  }
-
 
   .showbodylist {
     text-align: center;
@@ -88,25 +83,32 @@ a {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    /* align-items: center;
-    justify-content: center !important; */
     background-color: white;
-    /* padding-left: 40px;
-    padding-right: 40px; */
     padding: 10px;
-
     width: 300px;
   }
 
-  .listbody {
+    .backgroundcolor {
+        background-color: white;
+        width: 280px;
+
+    }
+  .showname {
+      font-size:xx-large;
+      background-color: white;
+  }
+
+.listwhole {
     display: flex;
     flex-direction: row;
-    
-  }
+    width: 350px;
+    padding-top: 20px;
+}
 
   .additems {
       margin-top: 300px;
       width: 600px;
+    
   }
   .photo {
     display: flex;
@@ -125,15 +127,12 @@ a {
   }
 
   .showButton {
+    text-align: center;
       padding: 20px;
   }
   .addlist {
     text-align: center;
   }
-
-  /* .listbkgrnd {
-      background-color: white;
-  } */
 
   h1 {
     text-align: center;

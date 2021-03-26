@@ -15,12 +15,15 @@
   const groceryListCtrl = require('../controllers/groceryList');
 
   router.get('/:id/edit', groceryListCtrl.edit);
+  router.get('/:id/grocerylistedit', groceryListCtrl.editgrocerylist);
   
   router.get('/', groceryListCtrl.index);
   router.get('/new', groceryListCtrl.new);
   router.post('/', groceryListCtrl.create);
   router.get('/show', groceryListCtrl.show);
   router.put('/:id', groceryListCtrl.update)
+  router.put('/:id/grocerylistedit', groceryListCtrl.updateGroceryList)
+
 
 
   router.delete('/removegrocery/:id/:idx', groceryListCtrl.removegrocery);
