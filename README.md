@@ -9,7 +9,7 @@
 
 ##  Getting Started. 🏎💨 
 
-[click here](https://bawumbila.github.io/Rick-and-Morty/) to get started. 
+[click here](https://groceries-app-bawa.herokuapp.com/) to get started. 
 
 ##  Technologies Used. ⚙️
 - Express

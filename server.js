@@ -26,6 +26,6 @@ app.use("/", indexRouter);
 // app.use("/", performersRouter);
 
 
-app.listen(port, function () {
+app.listen(port, ()=> {
   console.log(`Express is listening on port:${port}`);
 });
